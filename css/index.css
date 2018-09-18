@@ -1,0 +1,19 @@
+html,
+body,
+.block,
+content {
+  height: 100%;
+}
+
+/* .card {
+    margin-top: 80px;
+} */
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+} 
+.group:after {
+  clear: both;
+}
