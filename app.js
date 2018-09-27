@@ -15,7 +15,7 @@ const Koa = require("koa"),
 onerror(app);
 
 // middlewares
-app.use(helmet());
+// app.use(helmet());
 app.use(compress());
 app.use(
   bodyparser({
