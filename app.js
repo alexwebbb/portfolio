@@ -16,7 +16,7 @@ onerror(app);
 
 // middlewares
 // app.use(helmet());
-app.use(compress());
+// app.use(compress());
 app.use(
   bodyparser({
     enableTypes: ["json", "form", "text"]
