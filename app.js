@@ -1,5 +1,7 @@
 const Koa = require("koa"),
   app = new Koa(),
+  helmet = require("koa-helmet"),
+  compress = require("koa-compress"),
   views = require("koa-views"),
   json = require("koa-json"),
   onerror = require("koa-onerror"),
@@ -13,6 +15,8 @@ const Koa = require("koa"),
 onerror(app);
 
 // middlewares
+app.use(helmet());
+app.use(compress());
 app.use(
   bodyparser({
     enableTypes: ["json", "form", "text"]

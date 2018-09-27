@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  .blue
-    | test
+  nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarsExampleDefault.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='#')
+            | About Alex 
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='#') Earthworm
+        li.nav-item
+          a.nav-link(href='#') Item Store
+        li.nav-item
+          a.nav-link(href='#') Astro App
+        li.nav-item.dropdown
+          a#dropdown01.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Extras
+          .dropdown-menu(aria-labelledby='dropdown01')
+            a.dropdown-item(href='#') Holy Grail Quiz
+            a.dropdown-item(href='#') Some Illustrations
+  .container
+    .row
+      .offset-lg-4.col-12.col-lg-4
+        h1 About Alex
+        p.lead
+          | Developer, Chill Dude.
+          br
+          | Skilled at googling.

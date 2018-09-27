@@ -1,15 +1,18 @@
-// @import "materialize-css/sass/components/color-variables";
-// @charset "UTF-8";
+// Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
-// // Color
-// @import "materialize-css/sass/components/color-variables";
-// @import "materialize-css/sass/components/color-classes";
 
-// // Variables;
-// @import "materialize-css/sass/components/variables";
-
-// // Reset
-// @import "materialize-css/sass/components/normalize";
-
-// // components
-// @import "materialize-css/sass/components/global";
+// Optional
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/utilities/background";
