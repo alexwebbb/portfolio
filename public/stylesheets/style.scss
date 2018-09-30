@@ -15,4 +15,14 @@
 @import "bootstrap/scss/dropdown";
 @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/transitions";
-@import "bootstrap/scss/utilities/background";
+@import "bootstrap/scss/utilities";
+
+section {
+    padding-top: 54px;
+    margin-bottom: 54px;
+    min-height: 100vh;
+}
+
+footer {
+    color:red;
+}
