@@ -15,14 +15,27 @@
 @import "bootstrap/scss/dropdown";
 @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/transitions";
+@import "bootstrap/scss/modal";
 @import "bootstrap/scss/utilities";
+
+// ekko lightbox
+@import "ekko-lightbox.css";
 
 section {
     padding-top: 54px;
     margin-bottom: 54px;
-    min-height: 100vh;
+    min-height: 90vh;
+    padding-top: 10vh;
 }
 
 footer {
     color:red;
+}
+
+.home-gallery__image {
+    padding-top: 15px;
+}
+
+.project {
+    padding-top: 10vh;
 }

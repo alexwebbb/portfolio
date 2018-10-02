@@ -9,31 +9,39 @@ block content
       #navbarHome.collapse.navbar-collapse
         ul.navbar-nav.mr-auto
           li.nav-item.active
-            a.nav-link(href='')
+            a.nav-link(href='/')
               | About Alex 
               span.sr-only (current)
           - for ( i=0; i <= 3 ; i++)
             li.nav-item
               a.nav-link(href=("#" + projects[i].name)) #{projects[i].name}
-  body(data-spy="scroll" data-target="#navParent" data-offset="0").container
-    section.row
-      .offset-lg-4.col-12.col-lg-4
-        h1 About Alex
-        p.lead
-          | Developer, Chill Dude.
-          br
-          | Good at googling.
-    each project in projects
-      section(id=project.name).row
-        .col-12.col-lg-8
-          img(src="", alt="")
-        .col-12.col-lg-4
-          a(href=("https://" + project.href) target="_blank" rel="noopener noreferrer")
-            h1 #{project.name}
-          p #{project.description}
-          ul
-            each tech in project.techUsed
-              li 
-                a(href=("https://" + tech.href) target="_blank" rel="noopener noreferrer") #{tech.name}
+  body(data-spy="scroll" data-target="#navParent" data-offset="0")
+    .container
+      section.row
+        a.offset-md-4.col-md-4(href='https://res.cloudinary.com/execool/image/upload/v1538472456/portfolio/self-portrait.jpg', data-toggle='lightbox', data-gallery='home-gallery')
+          img.img-fluid.home-gallery__image.rounded(src='https://res.cloudinary.com/execool/image/upload/v1538472456/portfolio/self-portrait.jpg')
+        .offset-md-4.col-12.col-md-4
+          h1 About Alex
+          p.lead
+            | Developer, Chill Dude.
+            br
+            | Good at googling.
+      each project in projects
+        section(id=project.name).row
+          .col-12
+            a(href=("https://" + project.href) target="_blank" rel="noopener noreferrer")
+              h1 #{project.name}
+          .col-12.col-md-8
+            .row.project-gallery
+              a.col-sm-6(href=project.images[0], data-toggle='lightbox', data-gallery='project-gallery')
+                img.img-fluid.rounded(src=project.images[0])
+              a.col-sm-6(href=project.images[1], data-toggle='lightbox', data-gallery='project-gallery')
+                img.img-fluid.rounded(src=project.images[1])
+          .col-12.col-md-4
+            p #{project.description}
+            ul.row
+              each tech in project.techUsed
+                li.col-md-6 
+                  a(href=("https://" + tech.href) target="_blank" rel="noopener noreferrer") #{tech.name}
   footer
     p.text-center Alex Webb - 2018 
