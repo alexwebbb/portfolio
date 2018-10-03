@@ -1,8 +1,18 @@
+$primary: #90323d;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+$light:         #d9cab3;
+// $dark:          $gray-800 !default;
+$body-bg: #ebebd3;
+$body-color: #2d3319;
+
 // Required
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
-
 
 // Optional
 @import "bootstrap/scss/reboot";
@@ -21,21 +31,42 @@
 // ekko lightbox
 @import "ekko-lightbox.css";
 
+body {
+  background-image: url("https://www.transparenttextures.com/patterns/pixel-weave.png");
+}
+
+a {
+  text-decoration: none !important;
+}
+
+nav {
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-zebra-3d.png");
+
+  border-bottom: 1px solid $body-color;
+}
+
 section {
-    padding-top: 54px;
-    margin-bottom: 54px;
-    min-height: 90vh;
-    padding-top: 10vh;
+  margin-bottom: 54px;
+  min-height: 80vh;
+  padding-top: 10vh;
 }
 
 footer {
-    color:red;
+  padding-top: 54px;
+  color: red;
 }
 
-.home-gallery__image {
-    padding-top: 15px;
+.home-gallery__image,
+.project__image {
+  padding-top: 15px;
 }
 
 .project {
-    padding-top: 10vh;
+  padding-top: 10vh;
+}
+.project h1 {
+  text-shadow: #f7ebe8 2px 2px;
+  padding-left: 25px;
+
+  border-bottom: #bc8034 2px solid;
 }
