@@ -29,7 +29,7 @@ $body-color: #2d3319;
 @import "./node_modules/bootstrap/scss/utilities";
 
 // ekko lightbox
-@import "ekko-lightbox.css";
+@import "./node_modules/ekko-lightbox/dist/ekko-lightbox";
 
 body {
   background-image: url("/images/pixel-weave.png");
