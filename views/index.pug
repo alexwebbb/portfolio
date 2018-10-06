@@ -9,7 +9,7 @@ block content
       #navbarHome.collapse.navbar-collapse
         ul.navbar-nav.mr-auto.text-white
           li.nav-item.active
-            a.nav-link(href='/')
+            a.nav-link(href='#top')
               | About Alex 
               span.sr-only (current)
           - for ( i=0; i <= 3 ; i++)
@@ -17,7 +17,7 @@ block content
               a.nav-link(href=("#" + projects[i].name)) #{projects[i].name}
   body(data-spy="scroll" data-target="#navParent" data-offset="54")
     .container
-      section
+      section(id="top")
         .row
           a.offset-md-4.col-md-4(href=imageBaseUrl+'w_auto,c_scale/v1538472456/portfolio/self-portrait.jpg', data-toggle='lightbox', data-gallery='home-gallery')
             img.img-fluid.home-gallery__image(src='https://placeholder.pics/svg/300x400', data-src=imageBaseUrl+"v1538472456/portfolio/self-portrait.jpg", class="cld-responsive")
