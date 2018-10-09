@@ -10,11 +10,13 @@ block content
         ul.navbar-nav.mr-auto.text-white
           li.nav-item.active
             a.nav-link(href='#top')
-              | About Alex 
+              | About Alex
               span.sr-only (current)
-          - for ( i=0; i <= 3 ; i++)
+          - for ( i=0; i < projects.length; i++)
             li.nav-item
               a.nav-link(href=("#" + projects[i].name)) #{projects[i].name}
+          li.nav-item
+              a.nav-link(href=("https://" + githubString) target="_blank" rel="noopener noreferrer") GitHub
   body(data-spy="scroll" data-target="#navParent" data-offset="54")
     .container
       section(id="top")
@@ -39,11 +41,17 @@ block content
                   img.hoverable.img-fluid.rounded(src='https://placeholder.pics/svg/300x150', data-src=imageBaseUrl+responsiveQString+project.images[0], class="cld-responsive")
                 a.project__image.col-sm-6(href=imageBaseUrl+project.images[1], data-toggle='lightbox', data-gallery='project-gallery')
                   img.hoverable.img-fluid.rounded(src='https://placeholder.pics/svg/300x100', data-src=imageBaseUrl+responsiveQString+project.images[1], class="cld-responsive")
+                .col-sm-12.project__github-link-parent
+                  a.project__github-link-child(href=("https://" + githubString + project.githubId) target="_blank" rel="noopener noreferrer")
+                    | Visit on GitHub
             .col-12.col-md-4
-              p #{project.description}
-              ul.row.list-unstyled
-                each tech in project.techUsed
-                  li.col-md-6 
-                    a(href=("https://" + tech.href) target="_blank" rel="noopener noreferrer") #{tech.name}
+              .row.project__description
+                a.col.text-center.project__site-link(href=("https://" + project.href) target="_blank" rel="noopener   noreferrer")
+                    | Visit Site
+                p #{project.description}
+                ul.row.list-unstyled
+                  each tech in project.techUsed
+                    li.col-md-6 
+                      a(href=("https://" + tech.href) target="_blank" rel="noopener noreferrer") #{tech.name}
   footer
     p.text-center Alex Webb - 2018 

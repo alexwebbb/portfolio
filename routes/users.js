@@ -1,3 +1,4 @@
+// this file exists purely for future reference, as an example on how to create relative paths
 const router = require("koa-router")();
 
 router.prefix("/users");

@@ -1,7 +1,8 @@
-const projects = require("./projects"),
+const projects = require("./projectsData"),
 link = require("./link"),
 imageBaseUrl = "https://res.cloudinary.com/execool/image/upload/",
-responsiveQString = "w_auto,c_scale/";
+responsiveQString = "w_auto,c_scale/",
+githubString = "github.com/alexwebbb/";
 
 exports.index = async (ctx, next) => {
   await ctx.render("index", {
@@ -9,6 +10,7 @@ exports.index = async (ctx, next) => {
     projects,
     link,
     imageBaseUrl,
-    responsiveQString
+    responsiveQString,
+    githubString
   });
 };

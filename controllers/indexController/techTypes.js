@@ -10,6 +10,5 @@ exports.MONGODB = { name: "MongoDB", href: "www.mongodb.com" };
 exports.STRIPE = { name: "Stripe", href: "stripe.com" };
 exports.D3JS = { name: "D3.js", href: "d3js.org" };
 exports.JQUERY = { name: "jQuery", href: "jquery.com" };
-// passport.js doesnt have an https version... I refuse to support such a thing
 exports.PASSPORT = { name: "Passport", href: "bit.ly/2NTNJiw" };
 exports.CHARTJS = { name: "Chart.js", href: "www.chartjs.org"}
