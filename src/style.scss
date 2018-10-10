@@ -1,7 +1,7 @@
 // bootstrap default variables
 $primary: #90323d;
 $light: #d9cab3;
-$body-bg: #ebebd3;
+$body-bg: white;
 $body-color: #2d3319;
 
 // my custom colors
@@ -39,7 +39,7 @@ $mustard: #ffe066;
 body {
   font-family: "Heebo", sans-serif;
   font-weight: 300;
-  background-image: url("/images/pixel-weave.png");
+  // background-image: url("/images/pixel-weave.png");
 }
 
 h1,
@@ -102,7 +102,7 @@ footer {
   border-radius: 7px;
   border: 2px solid $light-blue;
   background-color: $light-blue;
-  background-image: url("/images/cutcube.png");
+  // background-image: url("/images/cutcube.png");
   transition: box-shadow 0.5s, text-shadow 0.5s, color 0.3s;
 }
 
@@ -122,7 +122,7 @@ footer {
   border: 2px solid $maroon;
   color: $offwhite;
   background-color: $maroon;
-  background-image: url("/images/arabesque.png");
+  // background-image: url("/images/arabesque.png");
   transition: box-shadow 0.2s, transform 0.2s, color 0.1s;
 }
 
