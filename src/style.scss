@@ -2,7 +2,7 @@
 $primary: #90323d;
 $secondary: #bc8034;
 $light: #d9cab3;
-$body-bg: grey;
+$body-bg: LightGrey;
 // $body-bg: white;
 $body-color: #2d3319;
 
@@ -36,9 +36,6 @@ $mustard: #ffe066;
 
 // ekko lightbox
 @import "ekko-lightbox/dist/ekko-lightbox";
-
-// // font awesome
-// @import "@fortawesome/fontawesome-free/scss/fontawesome";
 
 // fonts
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400");
@@ -77,6 +74,7 @@ a {
   text-decoration: none !important;
 }
 
+
 .top-navbar {
   background-image: url("/images/subtle-zebra-3d.png");
   border-bottom: 1px solid $body-color;
@@ -96,14 +94,16 @@ footer {
   color: $accent;
 }
 
+.project {
+  padding-top: 54px;
+  // margin-top: 10px;
+}
+
 .home-gallery__image,
 .project__image {
   padding-top: 15px;
 }
 
-.project {
-  // padding-top: 10vh;
-}
 .project__title {
   text-shadow: $accent 2px 2px;
   border-bottom: $secondary 2px solid;

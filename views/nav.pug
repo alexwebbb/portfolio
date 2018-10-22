@@ -1,4 +1,4 @@
-nav.top-navbar(id="navParent").navbar.navbar-expand-md.navbar-dark.bg-primary.fixed-top
+nav.top-navbar.navbar.navbar-expand-md.navbar-dark.bg-primary.fixed-top(id='project-scroll')
   .container
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarHome', aria-controls='navbarHome', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
@@ -8,12 +8,16 @@ nav.top-navbar(id="navParent").navbar.navbar-expand-md.navbar-dark.bg-primary.fi
           a.nav-link(href='#top')
             | About Alex
             span.sr-only (current)
-        //- - for ( i=0; i < projects.length; i++)
-        //-   li.nav-item
-        //-     a.nav-link(href=("#" + projects[i].name), data-target='#project-section-carousel', data-slide-to=i) #{projects[i].name}
+        li.nav-item.d-none.d-sm-block
+          a.nav-link(href='#projects') Projects
+        li.nav-item.dropdown.d-block.d-sm-none
+          a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Projects
+          .dropdown-menu
+            each project in projects
+              a.dropdown-item(href=("#" + project.name)) #{project.name}
         li.nav-item
-            a.nav-link(href=("https://" + githubString), target="_blank", rel="noopener noreferrer") GitHub
-        li.nav-item
-            a.nav-link(href=("/files/alex-webb-resume.pdf"), target="_blank", rel="noopener noreferrer") Resume
-        li.nav-item
-            a.nav-link(href="mailto:a@exe.cool") Email
+          a.nav-link(href=("https://" + githubString), target="_blank", rel="noopener noreferrer") GitHub
+        //- li.nav-item
+        //-     a.nav-link(href=("/files/alex-webb-resume.pdf"), target="_blank", rel="noopener noreferrer") Resume
+        //- li.nav-item
+        //-     a.nav-link(href="mailto:a@exe.cool") Email
