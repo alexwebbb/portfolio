@@ -2,7 +2,8 @@
 $primary: #90323d;
 $secondary: #bc8034;
 $light: #d9cab3;
-$body-bg: white;
+$body-bg: grey;
+// $body-bg: white;
 $body-color: #2d3319;
 
 // my custom colors
@@ -24,20 +25,43 @@ $mustard: #ffe066;
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
+@import "bootstrap/scss/pagination";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/dropdown";
 @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/modal";
+@import "bootstrap/scss/carousel";
 @import "bootstrap/scss/utilities";
 
 // ekko lightbox
 @import "ekko-lightbox/dist/ekko-lightbox";
 
+// // font awesome
+// @import "@fortawesome/fontawesome-free/scss/fontawesome";
+
 // fonts
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400");
 
 body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e2e2e2+0,808080+100 */
+  background: rgb(226, 226, 226); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(226, 226, 226, 1) 0%,
+    rgba(128, 128, 128, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(226, 226, 226, 1) 0%,
+    rgba(128, 128, 128, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(226, 226, 226, 1) 0%,
+    rgba(128, 128, 128, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#808080',GradientType=0 ); /* IE6-9 */
   font-family: "Heebo", sans-serif;
   font-weight: 300;
 }
@@ -53,16 +77,18 @@ a {
   text-decoration: none !important;
 }
 
-nav {
+.top-navbar {
   background-image: url("/images/subtle-zebra-3d.png");
-
   border-bottom: 1px solid $body-color;
 }
 
-section {
-  margin-bottom: 54px;
-  min-height: 80vh;
+.top-row {
   padding-top: 10vh;
+}
+
+.project-section__title {
+  font-size: 0.8em;
+  color: $accent;
 }
 
 footer {
@@ -76,10 +102,10 @@ footer {
 }
 
 .project {
-  padding-top: 10vh;
+  // padding-top: 10vh;
 }
 .project__title {
-  text-shadow: $offwhite 2px 2px;
+  text-shadow: $accent 2px 2px;
   border-bottom: $secondary 2px solid;
 }
 

@@ -1,0 +1,25 @@
+.project.row
+  .col-12
+    a.project__github-link.float-right.d-none.d-lg-block.pr-4(href=("https://" + githubString + project.githubId) target="_blank" rel="noopener noreferrer")
+      | Visit on GitHub
+    a.text-sm-left.text-center(href=("https://" + project.href) target="_blank" rel="noopener noreferrer")
+      h1.project__title.pl-sm-4 #{project.name}
+    .row
+      a.col-xs-12.col-sm-4.offset-sm-8.float-md-right.text-center.d-lg-none(href=("https://" + githubString + project.githubId) target="_blank" rel="noopener noreferrer")
+        | Visit on GitHub
+  .col-12.col-lg-8
+    .row
+      a.project__image.col-12(href=imageBaseUrl+project.images[0], data-toggle='lightbox', data-gallery='project-gallery')
+        img.hoverable.img-fluid.rounded(src=imageBaseUrl+project.images[0])
+      a.project__image.col-12(href=imageBaseUrl+project.images[1], data-toggle='lightbox', data-gallery='project-gallery')
+        img.hoverable.img-fluid.rounded(src=imageBaseUrl+project.images[1])
+      .col-sm-12.project__github-link-parent
+  .col-12.col-sm-6.col-lg-4
+    .row.project__description
+      a.col.text-center.project__site-link(href=("https://" + project.href) target="_blank" rel="noopener   noreferrer")
+          | Visit Site
+      p #{project.description}
+      ul.row.list-unstyled
+        each tech in project.techUsed
+          li.col-6 
+            a(href=("https://" + tech.href) target="_blank" rel="noopener noreferrer") #{tech.name}

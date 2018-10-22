@@ -1,0 +1,19 @@
+nav.top-navbar(id="navParent").navbar.navbar-expand-md.navbar-dark.bg-primary.fixed-top
+  .container
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarHome', aria-controls='navbarHome', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarHome.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto.text-white
+        li.nav-item.active
+          a.nav-link(href='#top')
+            | About Alex
+            span.sr-only (current)
+        //- - for ( i=0; i < projects.length; i++)
+        //-   li.nav-item
+        //-     a.nav-link(href=("#" + projects[i].name), data-target='#project-section-carousel', data-slide-to=i) #{projects[i].name}
+        li.nav-item
+            a.nav-link(href=("https://" + githubString), target="_blank", rel="noopener noreferrer") GitHub
+        li.nav-item
+            a.nav-link(href=("/files/alex-webb-resume.pdf"), target="_blank", rel="noopener noreferrer") Resume
+        li.nav-item
+            a.nav-link(href="mailto:a@exe.cool") Email

@@ -24,7 +24,7 @@ module.exports = [
     ],
     href: "alexwebbb.github.io/thinkful-async-web-apps/api-hack/",
     githubId:"earthworm",
-    description: `Earthworm is a visualization of Google's Elevation API utilizing D3. A square is shown on the map. You can move the square around and change it's shape. The view will update, in real time.`,
+    description: `See a view of the surface of the earth, made using Google's Elevation API and D3. A square is shown on the map. You can move the square around and change it's shape. The view will update, in real time.`,
     techUsed: [D3JS, JQUERY, BOOTSTRAP]
   },
   {
@@ -35,7 +35,7 @@ module.exports = [
     ],
     href: "itemstore.info/store/",
     githubId:"cool-web-store",
-    description: `Item Store is a mini web store, with basic session tracking. After you create an account, your views are tracked and saved as sessions, which can be viewed later. Complete with shopping cart, payment processing and order history.`,
+    description: `A mini web store, with basic session tracking. After you create an account, your views are tracked and saved as sessions, which can be viewed later. Complete with shopping cart, payment processing and order history.`,
     techUsed: [NODEJS, EXPRESSJS, MONGODB, BOOTSTRAP, PASSPORT, STRIPE, CHARTJS]
   },
   {
@@ -46,7 +46,7 @@ module.exports = [
     ],
     href: "astrology-app.herokuapp.com",
     githubId:"astro-affinity-app",
-    description: `Astro App lets you see how you would rate romantically with someone else if you were to break astrological signs down into numbers. Purchase credits to add profiles, and see graphs of the comparison data. utilizing sample info from FamousBirthdays.com. No real money involved, transactions are for simulation purposes only.`,
+    description: `Find out how you would stack up romantically with someone else if astrological signs were broken down into numbers. Purchase credits to add profiles, and see graphs of the comparison data.`,
     techUsed: [
       NODEJS,
       EXPRESSJS,
