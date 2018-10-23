@@ -13,6 +13,7 @@ $light-blue: #d6eeff;
 $maroon: #846267;
 $dark-accent: #544043;
 $mustard: #ffe066;
+$grey: #b8b8b8;
 
 // Required
 @import "bootstrap/scss/functions";
@@ -78,11 +79,11 @@ a {
 
 .about-page {
   font-family: "Coustard", serif;
-  text-shadow: $offwhite 2px 2px 1px;
   padding-top: 54px;
 }
 
 .about-page__text {
+  text-shadow: $offwhite 2px 2px 1px;
   text-indent: 1vw;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,ddf1f9+35,d3d3d3+100&1+0,0+100 */
   background: -moz-linear-gradient(
@@ -114,12 +115,30 @@ a {
   font-size: 1.2em;
 }
 
+.contact-page__linked-in {
+  margin-bottom: 20px;
+}
+
+.contact-page__card {
+  width: 280px;
+  max-width: 280px;
+  height: 212.467px;
+  max-height: 212.467px;
+  margin: 0px 15px 20px 15px;
+  text-align: center;
+  background-color: $body-bg;
+  border-radius: 3px;
+  box-shadow: $grey 0px 0px 2px;
+  border: $grey solid 1px;
+  padding-top: 85px;
+}
+
 .top-navbar {
   background-image: url("/images/subtle-zebra-3d.png");
   border-bottom: 1px solid $body-color;
 }
 
-.top-row {
+.top-row, .contact-page {
   padding-top: 10vh;
 }
 

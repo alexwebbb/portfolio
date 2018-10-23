@@ -1,7 +1,7 @@
 const router = require("koa-router")(),
-{ index } = require("../controllers/aboutController");
+{ index } = require("../controllers/contactController");
 
-router.prefix("/about");
+router.prefix("/contact");
 
 router.get("/", index);
 

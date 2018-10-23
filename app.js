@@ -10,7 +10,8 @@ const Koa = require("koa"),
   logger = require("koa-logger"),
   // routes
   home = require("./routes/home"),
-  about = require("./routes/about");
+  about = require("./routes/about"),
+  contact = require("./routes/contact");
 
 // error handler
 onerror(app);
@@ -45,6 +46,7 @@ app.use(async (ctx, next) => {
 // routes
 app.use(home.routes(), home.allowedMethods());
 app.use(about.routes(), about.allowedMethods());
+app.use(contact.routes(), contact.allowedMethods());
 
 // error-handling
 app.on("error", (err, ctx) => {
