@@ -1,5 +1,5 @@
 const router = require("koa-router")(),
-  { index } = require("../controllers/indexController");
+  { index } = require("../controllers/homeController");
 
 router.get("/", index);
 

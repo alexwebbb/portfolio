@@ -3,7 +3,6 @@ $primary: #90323d;
 $secondary: #bc8034;
 $light: #d9cab3;
 $body-bg: LightGrey;
-// $body-bg: white;
 $body-color: #2d3319;
 
 // my custom colors
@@ -38,9 +37,12 @@ $mustard: #ffe066;
 @import "ekko-lightbox/dist/ekko-lightbox";
 
 // fonts
-@import url("https://fonts.googleapis.com/css?family=Heebo:300,400");
+// @import url("https://fonts.googleapis.com/css?family=Heebo:300,400");
+@import url('https://fonts.googleapis.com/css?family=Coustard|Quicksand');
+
 
 body {
+  min-height: 100vh;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e2e2e2+0,808080+100 */
   background: rgb(226, 226, 226); /* Old browsers */
   background: -moz-linear-gradient(
@@ -59,21 +61,26 @@ body {
     rgba(128, 128, 128, 1) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#808080',GradientType=0 ); /* IE6-9 */
-  font-family: "Heebo", sans-serif;
-  font-weight: 300;
+  // font-family: "Heebo", sans-serif;
+  // font-weight: 300;
+  font-family: 'Quicksand', sans-serif;
 }
 
 h1,
 h2,
 a {
-  font-family: "Heebo", sans-serif;
-  font-weight: 400;
+  // font-family: "Heebo", sans-serif;
+  // font-weight: 400;
+  font-family: 'Coustard', serif;
 }
 
 a {
   text-decoration: none !important;
 }
 
+.about-page {
+  
+}
 
 .top-navbar {
   background-image: url("/images/subtle-zebra-3d.png");

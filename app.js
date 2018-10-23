@@ -9,8 +9,8 @@ const Koa = require("koa"),
   bodyparser = require("koa-bodyparser"),
   logger = require("koa-logger"),
   // routes
-  index = require("./routes/index"),
-  users = require("./routes/users");
+  home = require("./routes/home"),
+  about = require("./routes/about");
 
 // error handler
 onerror(app);
@@ -43,8 +43,8 @@ app.use(async (ctx, next) => {
 });
 
 // routes
-app.use(index.routes(), index.allowedMethods());
-// app.use(users.routes(), users.allowedMethods());
+app.use(home.routes(), home.allowedMethods());
+app.use(about.routes(), about.allowedMethods());
 
 // error-handling
 app.on("error", (err, ctx) => {

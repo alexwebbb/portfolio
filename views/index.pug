@@ -1,35 +1,21 @@
 extends layout
 
 block content
-  include nav
-  main
-    .container
-      .row
-        section.top-row(id="top").col-10.col-lg-2.col-sm-6.offset-1.offset-sm-3.offset-lg-0
-          a(href=imageBaseUrl+'w_auto,c_scale/v1538472456/portfolio/self-portrait.jpg', data-toggle='lightbox', data-gallery='home-gallery')
-            img.img-fluid.home-gallery__image(src='https://placeholder.pics/svg/300x400', data-src=imageBaseUrl+"v1538472456/portfolio/self-portrait.jpg", class="cld-responsive")
-            h1 About Alex
-            p.lead
-              | Developer, Chill Dude.
-              br
-              | Good at googling.
-        #projects.col-12.col-lg-10.d-none.d-sm-block
-          nav.top-row(aria-label='list of projects tab list')
-            h1.project-section__title Projects
-            // Nav tabs
-            ul.nav.nav-pills(role='tablist')
-              each project, index in projects
-                li.nav-item(role='presentation')
-                  a.nav-link(class=index === 0 ? 'active' : '', href="#" + project.name + "-tab", aria-controls=project.name, role='tab', data-toggle='tab') #{project.name}
-            // Tab panes
-            .tab-content
-              each project, index in projects
-                .tab-pane(id=project.name + "-tab", class=index === 0 ? 'active' : '', role='tabpanel')
-                  include project-card
-        .col-12.d-block.d-sm-none
-          h1.project-section__title.text-center Projects
-          each project in projects
-            section(id=project.name)
-              include project-card
-  footer
-    p.text-center Alex Webb - 2018 
+  #projects.col-12.col-lg-10.d-none.d-sm-block
+    nav.top-row(aria-label='list of projects tab list')
+      h1.project-section__title Projects
+      // Nav tabs
+      ul.nav.nav-pills(role='tablist')
+        each project, index in projects
+          li.nav-item(role='presentation')
+            a.nav-link(class=index === 0 ? 'active' : '', href="#" + project.name + "-tab", aria-controls=project.name, role='tab', data-toggle='tab') #{project.name}
+      // Tab panes
+      .tab-content
+        each project, index in projects
+          .tab-pane(id=project.name + "-tab", class=index === 0 ? 'active' : '', role='tabpanel')
+            include project-card
+  .col-12.d-block.d-sm-none
+    h1.project-section__title.text-center Projects
+    each project in projects
+      section(id=project.name)
+        include project-card

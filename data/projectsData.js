@@ -22,7 +22,7 @@ module.exports = [
       "v1538470637/portfolio/earthworm-full.jpg",
       "v1538470636/portfolio/earthworm-detail.jpg"
     ],
-    href: "alexwebbb.github.io/thinkful-async-web-apps/api-hack/",
+    href: "alexwebbb.github.io/earthworm/",
     githubId:"earthworm",
     description: `See a view of the surface of the earth, made using Google's Elevation API and D3. A square is shown on the map. You can move the square around and change it's shape. The view will update, in real time.`,
     techUsed: [D3JS, JQUERY, BOOTSTRAP]
