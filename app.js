@@ -16,17 +16,17 @@ const Koa = require("koa"),
 onerror(app);
 
 // middlewares
-app.use(favicon(__dirname + './public/images/favicon.ico'));
 app.use(helmet());
 app.use(compress());
 app.use(
   bodyparser({
     enableTypes: ["json", "form", "text"]
   })
-);
-app.use(json());
-app.use(logger());
-app.use(require("koa-static")(__dirname + "/public"));
+  );
+  app.use(json());
+  app.use(logger());
+  app.use(require("koa-static")(__dirname + "/public"));
+  app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.use(
   views(__dirname + "/views", {
