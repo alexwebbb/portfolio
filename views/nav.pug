@@ -15,7 +15,7 @@ nav.top-navbar.navbar.navbar-expand-md.navbar-dark.bg-primary.fixed-top(id='proj
             each project in projects
               a.dropdown-item(href=(title !== "Home" ? "/" : "") + "#" + project.name) #{project.name}
         li.nav-item
-          a.nav-link(href="/about") About
+          a.nav-link(href=((title === "Home" ? "/" : "#") + "about")) About
         li.nav-item
           a.nav-link(href=("https://" + githubString), target="_blank", rel="noopener noreferrer") GitHub
         //- li.nav-item
