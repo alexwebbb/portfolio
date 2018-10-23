@@ -1,5 +1,6 @@
 const Koa = require("koa"),
   app = new Koa(),
+  favicon = require('koa-favicon'),
   helmet = require("koa-helmet"),
   compress = require("koa-compress"),
   views = require("koa-views"),
@@ -15,6 +16,7 @@ const Koa = require("koa"),
 onerror(app);
 
 // middlewares
+app.use(favicon(__dirname + './public/images/favicon.ico'));
 app.use(helmet());
 app.use(compress());
 app.use(
