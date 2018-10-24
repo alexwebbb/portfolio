@@ -40,7 +40,6 @@ $grey: #b8b8b8;
 @import "ekko-lightbox/dist/ekko-lightbox";
 
 // fonts
-// @import url("https://fonts.googleapis.com/css?family=Heebo:300,400");
 @import url("https://fonts.googleapis.com/css?family=Coustard|Quicksand");
 
 body {
@@ -115,22 +114,49 @@ a {
   font-size: 1.2em;
 }
 
-.contact-page__linked-in {
-  margin-bottom: 20px;
-}
-
 .contact-page__card {
+  color: $offwhite;
+  font-size: 2em;
   width: 280px;
   max-width: 280px;
-  height: 212.467px;
-  max-height: 212.467px;
   margin: 0px 15px 20px 15px;
   text-align: center;
   background-color: $body-bg;
   border-radius: 3px;
   box-shadow: $grey 0px 0px 2px;
   border: $grey solid 1px;
-  padding-top: 85px;
+  padding: 85px 55px;
+  transition: color 0.1s, transform 0.2s, box-shadow 0.2s, border 0.1s;
+}
+
+.contact-page__card:hover {
+  transition: color 0.1s;
+  color: $accent;
+  
+
+}
+
+@include media-breakpoint-up(lg) {
+  .contact-page__card:hover {
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    transform: translate(-2px, -3px);
+    box-shadow: $body-color 2px 3px 6px;
+    border: $body-color solid 1px;
+  }
+  
+}
+
+.contact-page__card.card-1 {
+  background-color: #fff7f7;
+  background-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
+}
+.contact-page__card.card-2 {
+  background-color: #c9b5b5;
+  background-image: url("https://www.transparenttextures.com/patterns/gravel.png");
+}
+.contact-page__card.card-3 {
+  background-color: #ada09f;
+  background-image: url("https://www.transparenttextures.com/patterns/shley-tree-1.png");
 }
 
 .top-navbar {
@@ -138,7 +164,8 @@ a {
   border-bottom: 1px solid $body-color;
 }
 
-.top-row, .contact-page {
+.top-row,
+.contact-page {
   padding-top: 10vh;
 }
 

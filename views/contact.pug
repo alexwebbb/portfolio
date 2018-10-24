@@ -2,12 +2,12 @@ extends layout
 
 block content
   section.col-12.col-lg-10.contact-page(id="contact")
-    .row
-      .col-auto.contact-page__linked-in.LI-profile-badge(data-version='v1', data-size='medium', data-locale='en_US', data-type='horizontal', data-theme='light', data-vanity='alex-webb-143abb152')
-        a.LI-simple-link(href='https://www.linkedin.com/in/alex-webb-143abb152?trk=profile-badge') Alex Webb
-      a.contact-page__card(href=("/files/alex-webb-resume.pdf"), target="_blank", rel="noopener noreferrer")
+    .row.d-flex.justify-content-center
+      a.contact-page__card.card-1.col(href='https://www.linkedin.com/in/alex-webb-143abb152?trk=profile-badge')
+        | LinkedIn
+      a.contact-page__card.card-2.col(href=("/files/alex-webb-resume.pdf"), target="_blank", rel="noopener noreferrer")
         | Resume
-      a.contact-page__card(href="mailto:a@exe.cool", target="_blank", rel="noopener noreferrer")
+      a.contact-page__card.card-3.col(href="mailto:a@exe.cool", target="_blank", rel="noopener noreferrer")
         | Email
 
     
