@@ -82,7 +82,7 @@ a {
 }
 
 .about-page__text {
-  text-shadow: $offwhite 2px 2px 1px;
+  text-shadow: $offwhite 2px 2px 4px;
   text-indent: 1vw;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,ddf1f9+35,d3d3d3+100&1+0,0+100 */
   background: -moz-linear-gradient(
@@ -132,8 +132,6 @@ a {
 .contact-page__card:hover {
   transition: color 0.1s;
   color: $accent;
-  
-
 }
 
 @include media-breakpoint-up(lg) {
@@ -181,7 +179,7 @@ footer {
 
 .project {
   padding-top: 54px;
-  text-shadow: $offwhite 2px 2px 1px;
+  text-shadow: $offwhite 2px 2px 4px;
 }
 
 .home-gallery__image,
