@@ -1,18 +1,19 @@
 // bootstrap default variables
-$primary: #90323d;
-$secondary: #bc8034;
+$primary: #01579b;
+$secondary: #0091ea;
 $light: #d9cab3;
-$body-bg: LightGrey;
+$body-bg: white;
 $body-color: #2d3319;
 
 // my custom colors
-$accent: tomato;
+$accent: #f50057;
 $yellow-white: #f2f4e8;
 $offwhite: #f7ebe8;
 $light-blue: #d6eeff;
-$maroon: #846267;
-$dark-accent: #544043;
-$mustard: #ffe066;
+$button-base: #448aff;
+$button-accent: #304ffe;
+$button-border: #651fff;
+$button-highlight: #ffe066;
 $grey: #b8b8b8;
 
 // Required
@@ -40,7 +41,9 @@ $grey: #b8b8b8;
 @import "ekko-lightbox/dist/ekko-lightbox";
 
 // fonts
-@import url("https://fonts.googleapis.com/css?family=Coustard|Quicksand");
+// @import url("https://fonts.googleapis.com/css?family=Coustard|Quicksand");
+// @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed|PT+Serif');
+@import url("https://fonts.googleapis.com/css?family=Cabin|Quicksand");
 
 body {
   min-height: 100vh;
@@ -48,28 +51,30 @@ body {
   background: rgb(226, 226, 226); /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    rgba(226, 226, 226, 1) 0%,
+    white 0%,
     rgba(128, 128, 128, 1) 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    rgba(226, 226, 226, 1) 0%,
+    white 0%,
     rgba(128, 128, 128, 1) 100%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    rgba(226, 226, 226, 1) 0%,
+    white 0%,
     rgba(128, 128, 128, 1) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#808080',GradientType=0 ); /* IE6-9 */
 
+  // font-family: 'PT Serif', serif;
   font-family: "Quicksand", sans-serif;
 }
 
 h1,
 h2,
 a {
-  font-family: "Coustard", serif;
+  font-family: "Cabin", sans-serif;
+
 }
 
 a {
@@ -77,33 +82,37 @@ a {
 }
 
 .about-page {
-  font-family: "Coustard", serif;
+  font-family: "Cabin", sans-serif;
+
   padding-top: 54px;
 }
 
 .about-page__text {
-  text-shadow: $offwhite 2px 2px 4px;
+  text-shadow: $offwhite 2px 2px 12px;
   text-indent: 1vw;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,ddf1f9+35,d3d3d3+100&1+0,0+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,1+14,0.62+43,0+100 */
   background: -moz-linear-gradient(
     top,
-    rgba(254, 255, 255, 1) 0%,
-    rgba(221, 241, 249, 0.65) 35%,
-    rgba(211, 211, 211, 0) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(255, 255, 255, 0.62) 43%,
+    rgba(255, 255, 255, 0) 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    rgba(254, 255, 255, 1) 0%,
-    rgba(221, 241, 249, 0.65) 35%,
-    rgba(211, 211, 211, 0) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(255, 255, 255, 0.62) 43%,
+    rgba(255, 255, 255, 0) 100%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    rgba(254, 255, 255, 1) 0%,
-    rgba(221, 241, 249, 0.65) 35%,
-    rgba(211, 211, 211, 0) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(255, 255, 255, 0.62) 43%,
+    rgba(255, 255, 255, 0) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#00d3d3d3',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .about-page h1 {
@@ -131,29 +140,29 @@ a {
 
 .contact-page__card:hover {
   transition: color 0.1s;
-  color: $accent;
+  color: $button-highlight;
 }
 
 @include media-breakpoint-up(lg) {
   .contact-page__card:hover {
-    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s, text-shadow 2s;
     transform: translate(-2px, -3px);
     box-shadow: $body-color 2px 3px 6px;
     border: $body-color solid 1px;
+    text-shadow: $body-bg 0px 0px 48px;
   }
-  
 }
 
-.contact-page__card.card-1 {
-  background-color: #fff7f7;
+.card-1 {
+  background-color: #f7f7ff;
   background-image: url("/images/football-no-lines.png");
 }
-.contact-page__card.card-2 {
-  background-color: #c9b5b5;
+.card-2 {
+  background-color: #b5b8c9;
   background-image: url("/images/gravel.png");
 }
-.contact-page__card.card-3 {
-  background-color: #ada09f;
+.card-3 {
+  background-color: #a09fad;
   background-image: url("/images/shley-tree-1.png");
 }
 
@@ -188,7 +197,7 @@ footer {
 }
 
 .project__title {
-  text-shadow: $accent 2px 2px;
+  text-shadow: $body-bg 2px 2px;
   border-bottom: $secondary 2px solid;
 }
 
@@ -198,15 +207,15 @@ footer {
   padding: 10px;
   font-size: 2em;
   border-radius: 4px;
-  border: 2px solid $maroon;
+  border: 2px solid $button-base;
   color: $yellow-white;
-  background-color: $maroon;
+  background-color: $button-base;
   text-shadow: $body-color 1px 1px;
 }
 
 @include media-breakpoint-up(lg) {
   .project__site-link {
-    text-shadow: $offwhite 2px 2px 1px;
+    text-shadow: $offwhite 1px 1px 1px;
     transition: box-shadow 0.2s, transform 0.2s, color 0.1s, text-shadow 0.1s,
       background-color 0.4s, border 0.3s;
   }
@@ -216,10 +225,10 @@ footer {
       background-color 0.4s, border 0.3s;
     box-shadow: $body-color 2px 3px 6px;
     transform: translate(-2px, -3px);
-    color: $mustard;
+    color: $button-highlight;
     text-shadow: $offwhite 1px 1px 0px;
-    background-color: $dark-accent;
-    border: 2px solid $body-color;
+    background-color: $button-accent;
+    border: 2px solid $button-border;
   }
 }
 
@@ -228,45 +237,36 @@ footer {
   margin-right: 2px;
   padding: 0 10px;
 
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1ffff+0,e1ffff+9,e1ffff+12,e6f8fd+30,c8eefb+54,bee4f8+75,b1d8f5+100&0+24,0.54+46,0.53+63,0+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+8,0.53+22,1+33,1+69,0.62+84,0+100 */
   background: -moz-linear-gradient(
     top,
-    rgba(225, 255, 255, 0) 0%,
-    rgba(225, 255, 255, 0) 9%,
-    rgba(225, 255, 255, 0) 12%,
-    rgba(228, 250, 254, 0) 24%,
-    rgba(230, 248, 253, 0.15) 30%,
-    rgba(210, 241, 252, 0.54) 46%,
-    rgba(200, 238, 251, 0.54) 54%,
-    rgba(196, 234, 250, 0.53) 63%,
-    rgba(190, 228, 248, 0.36) 75%,
-    rgba(177, 216, 245, 0) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 8%,
+    rgba(255, 255, 255, 0.53) 22%,
+    rgba(255, 255, 255, 1) 33%,
+    rgba(255, 255, 255, 1) 69%,
+    rgba(255, 255, 255, 0.62) 84%,
+    rgba(255, 255, 255, 0) 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    rgba(225, 255, 255, 0) 0%,
-    rgba(225, 255, 255, 0) 9%,
-    rgba(225, 255, 255, 0) 12%,
-    rgba(228, 250, 254, 0) 24%,
-    rgba(230, 248, 253, 0.15) 30%,
-    rgba(210, 241, 252, 0.54) 46%,
-    rgba(200, 238, 251, 0.54) 54%,
-    rgba(196, 234, 250, 0.53) 63%,
-    rgba(190, 228, 248, 0.36) 75%,
-    rgba(177, 216, 245, 0) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 8%,
+    rgba(255, 255, 255, 0.53) 22%,
+    rgba(255, 255, 255, 1) 33%,
+    rgba(255, 255, 255, 1) 69%,
+    rgba(255, 255, 255, 0.62) 84%,
+    rgba(255, 255, 255, 0) 100%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    rgba(225, 255, 255, 0) 0%,
-    rgba(225, 255, 255, 0) 9%,
-    rgba(225, 255, 255, 0) 12%,
-    rgba(228, 250, 254, 0) 24%,
-    rgba(230, 248, 253, 0.15) 30%,
-    rgba(210, 241, 252, 0.54) 46%,
-    rgba(200, 238, 251, 0.54) 54%,
-    rgba(196, 234, 250, 0.53) 63%,
-    rgba(190, 228, 248, 0.36) 75%,
-    rgba(177, 216, 245, 0) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 8%,
+    rgba(255, 255, 255, 0.53) 22%,
+    rgba(255, 255, 255, 1) 33%,
+    rgba(255, 255, 255, 1) 69%,
+    rgba(255, 255, 255, 0.62) 84%,
+    rgba(255, 255, 255, 0) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e1ffff', endColorstr='#00b1d8f5',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
