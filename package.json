@@ -6,7 +6,7 @@
     "build-css": "node-sass-chokidar --include-path ./node_modules src/ -o public/dist/ --output-style compressed",
     "watch-css": "node-sass-chokidar --include-path ./node_modules src/ -o public/dist/ --watch --output-style compressed",
     "start": "node bin/www",
-    "dev": "concurrently \"npm run watch-css\" \"nodemon bin/www\" \"webpack --watch\"",
+    "dev": "concurrently \"yarn run watch-css\" \"nodemon bin/www\" \"webpack --watch\"",
     "prd": "pm2 start bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

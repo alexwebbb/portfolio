@@ -5,14 +5,14 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title= title
     link(rel='stylesheet', href='/dist/style.css')
-  body(data-spy="scroll", data-target="#project-scroll", data-offset="54")
+  body(data-spy='scroll', data-target='#project-scroll', data-offset='54')
     include nav
     main
       .container
         .row
-          section.top-row(id="top").col-10.col-lg-2.col-sm-6.offset-1.offset-sm-3.offset-lg-0
-            a(href=imageBaseUrl + responsiveQString + 'v1542058959/portfolio/self-portrait.jpg', data-toggle='lightbox', data-gallery='home-gallery')
-              img.img-fluid.home-gallery__image(src='https://placeholder.pics/svg/300x400', data-src=imageBaseUrl+"v1542058959/portfolio/self-portrait.jpg", class="cld-responsive")
+          section.top-row(id='top').col-10.col-lg-2.col-sm-6.offset-1.offset-sm-3.offset-lg-0
+            a(href=imageBaseUrl + responsiveQString + selfPortraitUrl, data-toggle='lightbox', data-gallery='home-gallery')
+              img.img-fluid.home-gallery__image(src='https://placeholder.pics/svg/300x300', data-src=imageBaseUrl+selfPortraitUrl, class='cld-responsive')
               h1 About Alex
               p.lead
                 | Developer, Chill Dude.
