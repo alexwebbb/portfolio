@@ -121,15 +121,15 @@ a {
 .contact-page__card {
   color: $offwhite;
   font-size: 2em;
-  width: 280px;
-  max-width: 280px;
+  // width: 280px;
+  min-width: 280px;
   margin: 0px 15px 20px 15px;
   text-align: center;
   background-color: $body-bg;
   border-radius: 3px;
   box-shadow: $grey 0px 0px 2px;
   border: $grey solid 1px;
-  padding: 85px 55px;
+  padding: 25px 55px;
   transition: color 0.1s, transform 0.2s, box-shadow 0.2s, border 0.1s;
 }
 
@@ -149,16 +149,16 @@ a {
 }
 
 .card-1 {
-  background-color: #f7f7ff;
-  background-image: url("/images/football-no-lines.png");
+  background-color: #d8bfbf;
+  // background-image: url("/images/football-no-lines.png");
 }
 .card-2 {
-  background-color: #b5b8c9;
-  background-image: url("/images/gravel.png");
+  background-color: #a8aebb;
+  // background-image: url("/images/gravel.png");
 }
 .card-3 {
-  background-color: #a09fad;
-  background-image: url("/images/shley-tree-1.png");
+  background-color: #738073;
+  // background-image: url("/images/shley-tree-1.png");
 }
 
 .top-navbar {
