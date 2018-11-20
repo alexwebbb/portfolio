@@ -5,6 +5,8 @@ imageBaseUrl = "https://res.cloudinary.com/execool/image/upload/",
 responsiveQString = "w_auto,c_scale/",
 githubString = "github.com/alexwebbb/";
 
+// generic controller gets used for all routes
+
 module.exports = function (target) {
   
   let module = {};
